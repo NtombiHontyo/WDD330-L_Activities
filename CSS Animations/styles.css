@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8rem;
+    background-color: black;
+    color: white;
+    width: 16vw;
+    height: 16vw;
+    text-align: center;
+    position: relative;
+    animation-name: myanima;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate  
+}
+@keyframes myanima {
+    0% {background: radial-gradient(circle, green, yellow); left: 0px; top: 0px;}
+    33% {background: radial-gradient(circle, yellow, green);left: 200px; top: 200px;}
+    66% {background: radial-gradient(circle, green, yellow); left: -200px; top: 200px;}
+    100% {background: radial-gradient(circle, yellow, green);left: 0px; top: 0px;}
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Example Form Layout using CSS Grid</h1>
+    </header>
+    <main>
+        <h3>Future Value</h3>
+        <form>
+            <label for="principle">Principle: </label>
+            <input type="number" id="principle" required>
+
+            <label for="confprinciple">Confirm Principle: </label>
+            <input type="number" id="confprinciple" required>
+            <span class="error"></span>
+
+            <label for="annualrate">Annual rate: </label>
+            <input type="number" id="annualrate" step="0.01" placeholder=".08" required>
+
+            <label for="years">Years:  </label>
+            <input type="number" id="years" required>
+
+            <label for="periods">Periods: </label>
+            <input type="number" id="periods" required>
+
+            <button onclick="doFV()" id="click" type="submit">Compute Future Value</button>
+        </form>
+        <hr> Future Value: <span id="output"></span>
+    </main>
+    <footer>
+        &copy;<span id="theyear"></span> • Antonia Francesca • Utah • WDD</footer>
+        <script src="script.js"></script>
+</body>
+</html>

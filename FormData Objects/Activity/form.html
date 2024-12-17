@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="text" name="name" value="Ntombi">
+    <input type="text" name=" surname" value="Hontyo">
+    <input type="submit">
+    </form>
+
+    <script>
+        const form = document.querySelector("form")
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            
+            formData = new FormData(form)
+
+            const date = new Date()
+            formData.append("Date", date.toLocaleDateString())
+
+            for(let [name, value] of formData){
+                console.log(`${name}: ${value}`)
+            }
+          
+        })
+        
+      </script>
+</body>
+</html>

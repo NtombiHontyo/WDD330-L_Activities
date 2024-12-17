@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="name" value="John">
+        <input type="text" name="surname" value="Smith">
+        <input type="submit">
+    </form>
+    <script>
+        // formElem.onsubmit = async (e) => {
+        //     e.preventDefault();
+
+        //     let response = await fetch('/article/formdata/post/user', {
+        //         method: "POST",
+        //         body: new FormData(formElem)
+        //     });
+
+        //     let result = await response.json();
+
+        //     alert(result.message)
+        // }
+
+        //Iterating through the form
+        const form = document.querySelector("form");
+
+        let formData = new FormData(form)
+        formData.append("girlfriend", "ntombi");
+        formData.append("nephew", "Yiba");
+
+        for(let [name, value] of formData) {
+            alert(`${name} = ${value}`);
+        }
+    </script>
+</body>
+</html>
