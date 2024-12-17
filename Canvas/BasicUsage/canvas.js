@@ -10,6 +10,7 @@ function draw() {
         ctx.fillRect(30, 30, 50, 50);
         //Top, Left, Width, Length
     }
+    
 }
 
 draw()
